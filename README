@@ -1,1 +1,3 @@
 Document management system demo using Firebase, Node, Express, Gulp and Angular
+
+From the root directory, run npm install and then gulp in order to run the app locally

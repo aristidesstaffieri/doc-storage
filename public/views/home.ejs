@@ -1,3 +1,37 @@
-<div ng-controller="IndexCtrl">
-	<p>Index page</p>
+<div ng-controller="IndexCtrl" class="parent-container">
+	<h3>New Document</h3>
+	<form autocomplete="off">
+		<label for="title">Title</label>
+		<input type="text" name="title" ng-model="title"/>
+
+		<label for="document-text">Document Text</label>
+		<textarea name="document-text" row="5" cols="12" ng-model="docText"></textarea>
+		<button type="submit" ng-click="submit()">Submit</button>
+	</form>
+
+	<div class="documents">
+		<h3>Here are your current documents</h3>
+		<input type="text" placeholder="Search for Documents" ng-model="searchDocs">
+		<div ng-repeat="doc in docs | filter:searchDocs | filter: {doc: doc.metaTags}" class="doc">
+			<p>Title: {{ doc.title }}</p>
+			<p>Document Text: {{ doc.docText }}</p>
+			<p>Tags: </p>
+			<span ng-repeat="tag in doc.metaTags">{{ tag }}</span>
+			<button ng-click="editDoc(doc)" class="edit-btn">Edit</button>
+		</div>
+	</div>
+
+	<div class="edit-docs">
+		<h3>Edit a doc below by selecting edit on a document</h3>
+		<label for="title">Title</label>
+		<input type="text" name="title" ng-model="editTitle"/>
+
+		<label for="tags">Tags</label>
+		<input type="text" name="tags" ng-model="tags" placeholder="Add tags, separated by a comma"/>
+		<span ng-repeat="tag in tags">{{ tag }}</span>
+
+		<label for="document-text">Document Text</label>
+		<textarea name="document-text" row="5" cols="12" ng-model="editDocText"></textarea>
+		<button type="submit" ng-click="reSubmit()">Submit</button>
+	</div>
 </div>

@@ -14,3 +14,26 @@
 html {
 	font-size: 16px; // 1 rem
 }
+
+.parent-container.ng-scope {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.documents {
+  margin-top: 50px;
+}
+
+.edit-docs {
+  margin-top: 50px;
+}
+
+.doc {
+  padding-bottom: 25px;
+}
+
+.edit-btn {
+  display: block;
+}

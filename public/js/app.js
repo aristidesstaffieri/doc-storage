@@ -4,7 +4,7 @@ angular.module('doc-storage', [
 	'ngRoute',
 	'firebase'
 ])
-.constant('FIREBASE_URL', 'https://sms-test-twil.firebaseio.com/')
+.constant('FIREBASE_URL', 'https://doc-storage.firebaseio.com//')
 .config(['$routeProvider', '$locationProvider', '$logProvider', 
 	function ($routeProvider, $locationProvider, $logProvider) {
 	$routeProvider

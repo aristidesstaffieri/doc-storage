@@ -7,21 +7,10 @@
 @import '../../neat/neat-helpers';
 
 //Global vars
-$break-small: 768px;
+
 
 // Global styles
-.landing-section { 
-  background: url(../../img/wedding.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 1000px;
-  @media screen and (max-width: $break-small) {
-  	background: url(../../img/wedding-small.jpg) no-repeat center top fixed; 
-  }
+
+html {
+	font-size: 16px; // 1 rem
 }
-
-@import 'partials/nav';
-@import 'partials/wedding';
-

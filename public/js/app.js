@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('smsTest', [
+angular.module('doc-storage', [
 	'ngRoute',
 	'firebase'
 ])
